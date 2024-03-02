@@ -1,0 +1,33 @@
+---
+import Github from './icons/Github.astro'
+import LinkedIn from './icons/LinkedIn.astro'
+---
+<section class="flex flex-col items-center justify-center py-16">
+	<div class="flex flex-row items-center justify-center gap gap-8">
+		<img 
+		class="size-48 shadow-lg rounded-full"
+		src="../../public/me.webp" 
+		alt="Imagen de Juan Buenrostro">
+		<div class="flex flex-col items-start justify-start max-w-2xl">
+			<h1 class="text-4xl font-bold text-white lg:text-5xl pb-2">Hello, I'm <span class="text-blue-500">Juan Buenrostro</span>.</h1>
+			<h2 
+				class=" text-2xl text-white">
+					<span class="text-blue-500 font-semibold">Systems engineer student from Saltillo, México</span>.  
+					I always think about improving and using organization 
+					to learn more about other technologies.
+			</h2>
+			
+			<nav class="flex gap-x-2 mt-4">
+				<a href="https://linkedin.com/in/juanmbv" class="flex rounded-full border border-white/10 justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:scale-110 hover:bg-white/10">
+					<LinkedIn class="size-6"/>
+					LinkedIn
+				</a>
+				<a href="https://github.com/juanmbv" class="flex rounded-full border border-white/10 justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:scale-110 hover:bg-white/10">
+					<Github class="size-6"/>
+					Github
+				</a>
+			</nav>
+		</div>
+	</div>
+	
+</section>
