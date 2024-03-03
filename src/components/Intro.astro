@@ -1,8 +1,9 @@
 ---
-import Github from './icons/Github.astro'
+import Github from './icons/GitHub.astro'
 import LinkedIn from './icons/LinkedIn.astro'
+import Mail from './icons/Mail.astro'
 ---
-<section class="flex flex-col items-center justify-center py-16">
+<section class="flex flex-col items-center justify-center py-32">
 	<div class="flex flex-row items-center justify-center gap gap-8">
 		<img 
 		class="size-48 shadow-lg rounded-full"
@@ -13,18 +14,32 @@ import LinkedIn from './icons/LinkedIn.astro'
 			<h2 
 				class=" text-2xl text-white">
 					<span class="text-blue-500 font-semibold">Systems engineer student from Saltillo, México</span>.  
-					I always think about improving and using organization 
-					to learn more about other technologies.
+					I always think about improving and using organization to learn more about other technologies.
 			</h2>
 			
 			<nav class="flex gap-x-2 mt-4">
-				<a href="https://linkedin.com/in/juanmbv" class="flex rounded-full border border-white/10 justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:scale-110 hover:bg-white/10">
+				<a 
+					href="https://linkedin.com/in/juanmbv" 
+					target="_blank" 
+					rel="noopener" 
+					class="flex rounded-full border border-white/10 justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:scale-110 hover:bg-white/10">
 					<LinkedIn class="size-6"/>
 					LinkedIn
 				</a>
-				<a href="https://github.com/juanmbv" class="flex rounded-full border border-white/10 justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:scale-110 hover:bg-white/10">
+				<a 
+					href="https://github.com/juanmbv" 
+					target="_blank"
+					rel="noopener"
+					class="flex rounded-full border border-white/10 justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:scale-110 hover:bg-white/10">
 					<Github class="size-6"/>
 					Github
+				</a>
+				<a 
+					href="mailto:juanmbv.31@gmail.com"
+					class="flex rounded-full border border-white/10 justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:scale-110 hover:bg-white/10"
+					>
+					<Mail class="size-6"/>
+					Mail
 				</a>
 			</nav>
 		</div>
