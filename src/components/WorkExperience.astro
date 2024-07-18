@@ -1,0 +1,52 @@
+---
+import BriefCase from "./icons/BriefCase.astro"
+
+const WORK_EXPERIENCE = [
+  {
+    position: 'Trainee Full Stack Developer',
+    company: 'ADS',
+    startDate: 'April 2024',
+    endDate: 'Present',
+    description: [
+      'I have had the opportunity to automate the manufacturing process, quality and materials management in companies such as MAGNA.',
+      'Implement better application management by using Git and Github, facilitating teamwork in the office',
+      'Provide solutions to optimize and improve the software made in the company'
+    ]
+  },
+]
+---
+
+<section class="flex flex-col justify-start min-h-max max-w-4xl pb-14">
+  <div class="flex flex-row justify-start items-start gap gap-4">
+    <BriefCase class="size-8" />
+    <h2 class="text-3xl font-semibold pb-6">Work Experience</h2>
+  </div>
+  <div class="relative mx-12 pb-12 flex before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]">
+    <div class="flex flex-col gap-12">
+      {
+        WORK_EXPERIENCE.map(({ position, company, startDate, endDate, description }) => (
+          <div class="flex flex-row gap-20 min-h-32 max-h-32">
+            <div class="flex flex-col min-w-60 gap-2"> 
+              <span class="text-blue-500 -left-[42px] absolute rounded-full text-5xl">&bull;</span>
+              <h3 class="text-2xl font-semibold text-blue-500">{position}</h3>
+              <h4 class="text-base font-semibold">{company}</h4>
+              <time class="text-sm font-semibold text-gray-400">{startDate} - {endDate}</time>
+            </div>
+            <div class="relative mx-12 pb-12 flex before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]">
+              <div class="flex flex-col gap-2">
+                {
+                  description.map((desc) => (
+                    <div>
+                      <span class="text-blue-300 -left-[42px] absolute rounded-full text-5xl">&bull;</span>
+                      <p class="text-sm">{desc}</p>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
